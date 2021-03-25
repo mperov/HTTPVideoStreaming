@@ -25,7 +25,7 @@ def video_feed():
 
 if __name__ == '__main__':
     try:
-        port = sys.argv[1]
+        host = sys.argv[1]
     except:
         print('Первым аргументом должен быть ip-адрес!')
         exit(1)
