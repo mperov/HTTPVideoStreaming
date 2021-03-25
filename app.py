@@ -27,12 +27,17 @@ if __name__ == '__main__':
     try:
         port = sys.argv[1]
     except:
-        print 'Первым аргументом должен быть номер порта!'
+        print('Первым аргументом должен быть ip-адрес!')
+        exit(1)
+    try:
+        port = sys.argv[2]
+    except:
+        print('Вторым аргументом должен быть номер порта!')
         exit(1)
     try:
         #global _id
-        _id = int(sys.argv[2])
+        _id = int(sys.argv[3])
     except:
-        print 'Вторым аргументом должен быть ID камеры!'
+        print('Третьим аргументом должен быть ID камеры!')
         exit(1)
-    app.run(host='192.168.70.17', port=int(port), debug=False)
+    app.run(host=host, port=int(port), debug=False)
